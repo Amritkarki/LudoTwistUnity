@@ -1723,6 +1723,7 @@ GameObject:
   - component: {fileID: 99243718}
   - component: {fileID: 99243717}
   - component: {fileID: 99243719}
+  - component: {fileID: 99243720}
   m_Layer: 0
   m_Name: player (2)
   m_TagString: Untagged
@@ -1799,10 +1800,66 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 424619fa7d03c8d48aab7e71574542f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canMove: 0
   moveNow: 0
   stepToMove: 0
-  pathObjects: {fileID: 0}
-  test: {fileID: 0}
+  pathsParent: {fileID: 0}
+--- !u!114 &99243720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 99243715}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 99243717}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 99243719}
+        m_TargetAssemblyTypeName: GreenPlayer, Assembly-CSharp
+        m_MethodName: onClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &106012252 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2767000081428111675, guid: 2ca66cc56c1e2a4438d3c20f7d5f2505, type: 3}
@@ -5286,6 +5343,7 @@ GameObject:
   - component: {fileID: 304961112}
   - component: {fileID: 304961111}
   - component: {fileID: 304961113}
+  - component: {fileID: 304961114}
   m_Layer: 0
   m_Name: player (1)
   m_TagString: Untagged
@@ -5362,9 +5420,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0a218035ae8b1f4cb77ad8e71d2f238, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canMove: 0
   moveNow: 0
   stepToMove: 0
-  pathObjects: {fileID: 0}
+  pathsParent: {fileID: 0}
+--- !u!61 &304961114
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 304961109}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 70, y: 70}
+  m_EdgeRadius: 0
 --- !u!1001 &305556000
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7566,7 +7651,7 @@ MonoBehaviour:
   m_UiScaleMode: 0
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1080, y: 1920}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -8068,6 +8153,7 @@ GameObject:
   - component: {fileID: 503373045}
   - component: {fileID: 503373044}
   - component: {fileID: 503373046}
+  - component: {fileID: 503373047}
   m_Layer: 0
   m_Name: player (3)
   m_TagString: Untagged
@@ -8144,10 +8230,66 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 424619fa7d03c8d48aab7e71574542f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canMove: 0
   moveNow: 0
   stepToMove: 0
-  pathObjects: {fileID: 0}
-  test: {fileID: 0}
+  pathsParent: {fileID: 0}
+--- !u!114 &503373047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 503373042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 503373044}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 503373046}
+        m_TargetAssemblyTypeName: GreenPlayer, Assembly-CSharp
+        m_MethodName: onClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &509700370
 GameObject:
   m_ObjectHideFlags: 0
@@ -8795,9 +8937,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf65e78d89daaf044b7ddfa992885935, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canMove: 0
   moveNow: 0
   stepToMove: 0
-  pathObjects: {fileID: 0}
+  pathsParent: {fileID: 0}
 --- !u!114 &520351593 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1206671168907694900, guid: 2ca66cc56c1e2a4438d3c20f7d5f2505, type: 3}
@@ -10810,6 +10953,7 @@ GameObject:
   - component: {fileID: 625987569}
   - component: {fileID: 625987568}
   - component: {fileID: 625987570}
+  - component: {fileID: 625987571}
   m_Layer: 0
   m_Name: player
   m_TagString: Untagged
@@ -10886,9 +11030,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 811cf85ae2f917941b802dcfdefb688f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canMove: 0
   moveNow: 0
   stepToMove: 0
-  pathObjects: {fileID: 0}
+  pathsParent: {fileID: 0}
+--- !u!61 &625987571
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 625987566}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 70, y: 70}
+  m_EdgeRadius: 0
 --- !u!1 &626462232
 GameObject:
   m_ObjectHideFlags: 0
@@ -11685,6 +11856,7 @@ GameObject:
   - component: {fileID: 654009955}
   - component: {fileID: 654009954}
   - component: {fileID: 654009956}
+  - component: {fileID: 654009957}
   m_Layer: 0
   m_Name: player (2)
   m_TagString: Untagged
@@ -11761,9 +11933,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 811cf85ae2f917941b802dcfdefb688f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canMove: 0
   moveNow: 0
   stepToMove: 0
-  pathObjects: {fileID: 0}
+  pathsParent: {fileID: 0}
+--- !u!61 &654009957
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 654009952}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 70, y: 70}
+  m_EdgeRadius: 0
 --- !u!1001 &659918255
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15344,6 +15543,7 @@ GameObject:
   - component: {fileID: 811186400}
   - component: {fileID: 811186399}
   - component: {fileID: 811186401}
+  - component: {fileID: 811186402}
   m_Layer: 0
   m_Name: player (1)
   m_TagString: Untagged
@@ -15420,10 +15620,66 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 424619fa7d03c8d48aab7e71574542f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canMove: 0
   moveNow: 0
   stepToMove: 0
-  pathObjects: {fileID: 0}
-  test: {fileID: 0}
+  pathsParent: {fileID: 0}
+--- !u!114 &811186402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 811186397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 811186399}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 811186401}
+        m_TargetAssemblyTypeName: GreenPlayer, Assembly-CSharp
+        m_MethodName: onClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &817845616
 GameObject:
   m_ObjectHideFlags: 0
@@ -15436,6 +15692,7 @@ GameObject:
   - component: {fileID: 817845619}
   - component: {fileID: 817845618}
   - component: {fileID: 817845620}
+  - component: {fileID: 817845621}
   m_Layer: 0
   m_Name: player (3)
   m_TagString: Untagged
@@ -15512,9 +15769,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 866e917d622441d498fb4d84fab098d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canMove: 0
   moveNow: 0
   stepToMove: 0
-  pathObjects: {fileID: 0}
+  pathsParent: {fileID: 0}
+--- !u!61 &817845621
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 817845616}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 70, y: 70}
+  m_EdgeRadius: 0
 --- !u!1 &818120479
 GameObject:
   m_ObjectHideFlags: 0
@@ -18927,6 +19211,7 @@ GameObject:
   - component: {fileID: 974737458}
   - component: {fileID: 974737457}
   - component: {fileID: 974737459}
+  - component: {fileID: 974737460}
   m_Layer: 0
   m_Name: player
   m_TagString: Untagged
@@ -19003,9 +19288,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 866e917d622441d498fb4d84fab098d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canMove: 0
   moveNow: 0
   stepToMove: 0
-  pathObjects: {fileID: 0}
+  pathsParent: {fileID: 0}
+--- !u!61 &974737460
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 974737455}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 70, y: 70}
+  m_EdgeRadius: 0
 --- !u!1 &975195040
 GameObject:
   m_ObjectHideFlags: 0
@@ -23847,7 +24159,7 @@ GameObject:
   - component: {fileID: 1232914370}
   - component: {fileID: 1232914371}
   m_Layer: 0
-  m_Name: PathObjects
+  m_Name: PathObjectsParent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -23881,7 +24193,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1232914369}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42afd63de2e92e741bb6aa2da58c537b, type: 3}
+  m_Script: {fileID: 11500000, guid: df034cdf402bf5342bf7ef2709e47033, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   commonPathPoints:
@@ -23937,7 +24249,7 @@ MonoBehaviour:
   - {fileID: 138323346}
   - {fileID: 1254112098}
   - {fileID: 1282415282}
-  CommonMovementPath:
+  commonMovementPath:
   - {fileID: 1198932223}
   - {fileID: 1741764686}
   - {fileID: 601792398}
@@ -27499,7 +27811,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1460804273
 RectTransform:
   m_ObjectHideFlags: 0
@@ -28678,6 +28990,7 @@ GameObject:
   - component: {fileID: 1513657196}
   - component: {fileID: 1513657195}
   - component: {fileID: 1513657197}
+  - component: {fileID: 1513657198}
   m_Layer: 0
   m_Name: player (3)
   m_TagString: Untagged
@@ -28754,9 +29067,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0a218035ae8b1f4cb77ad8e71d2f238, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canMove: 0
   moveNow: 0
   stepToMove: 0
-  pathObjects: {fileID: 0}
+  pathsParent: {fileID: 0}
+--- !u!61 &1513657198
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1513657193}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 70, y: 70}
+  m_EdgeRadius: 0
 --- !u!114 &1514528419 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1206671168907694900, guid: 2ca66cc56c1e2a4438d3c20f7d5f2505, type: 3}
@@ -30594,7 +30934,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -0.000015259}
   m_SizeDelta: {x: 1080, y: 1920}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1588703038
@@ -32867,6 +33207,7 @@ GameObject:
   - component: {fileID: 1697706713}
   - component: {fileID: 1697706712}
   - component: {fileID: 1697706714}
+  - component: {fileID: 1697706715}
   m_Layer: 0
   m_Name: player (3)
   m_TagString: Untagged
@@ -32943,9 +33284,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 811cf85ae2f917941b802dcfdefb688f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canMove: 0
   moveNow: 0
   stepToMove: 0
-  pathObjects: {fileID: 0}
+  pathsParent: {fileID: 0}
+--- !u!61 &1697706715
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1697706710}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 70, y: 70}
+  m_EdgeRadius: 0
 --- !u!1001 &1701889924
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33991,6 +34359,7 @@ GameObject:
   - component: {fileID: 1752924995}
   - component: {fileID: 1752924994}
   - component: {fileID: 1752924996}
+  - component: {fileID: 1752924997}
   m_Layer: 0
   m_Name: player (1)
   m_TagString: Untagged
@@ -34067,9 +34436,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 866e917d622441d498fb4d84fab098d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canMove: 0
   moveNow: 0
   stepToMove: 0
-  pathObjects: {fileID: 0}
+  pathsParent: {fileID: 0}
+--- !u!61 &1752924997
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1752924992}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 70, y: 70}
+  m_EdgeRadius: 0
 --- !u!1 &1754235571
 GameObject:
   m_ObjectHideFlags: 0
@@ -35615,6 +36011,7 @@ GameObject:
   - component: {fileID: 1862679048}
   - component: {fileID: 1862679047}
   - component: {fileID: 1862679049}
+  - component: {fileID: 1862679050}
   m_Layer: 0
   m_Name: player (2)
   m_TagString: Untagged
@@ -35691,9 +36088,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 866e917d622441d498fb4d84fab098d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canMove: 0
   moveNow: 0
   stepToMove: 0
-  pathObjects: {fileID: 0}
+  pathsParent: {fileID: 0}
+--- !u!61 &1862679050
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1862679045}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 70, y: 70}
+  m_EdgeRadius: 0
 --- !u!1 &1866864521
 GameObject:
   m_ObjectHideFlags: 0
@@ -35797,6 +36221,7 @@ GameObject:
   - component: {fileID: 1876652106}
   - component: {fileID: 1876652105}
   - component: {fileID: 1876652107}
+  - component: {fileID: 1876652108}
   m_Layer: 0
   m_Name: player
   m_TagString: Untagged
@@ -35873,9 +36298,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0a218035ae8b1f4cb77ad8e71d2f238, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canMove: 0
   moveNow: 0
   stepToMove: 0
-  pathObjects: {fileID: 0}
+  pathsParent: {fileID: 0}
+--- !u!61 &1876652108
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1876652103}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 70, y: 70}
+  m_EdgeRadius: 0
 --- !u!1001 &1883558577
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -38120,6 +38572,7 @@ GameObject:
   - component: {fileID: 2007018114}
   - component: {fileID: 2007018113}
   - component: {fileID: 2007018115}
+  - component: {fileID: 2007018116}
   m_Layer: 0
   m_Name: player (2)
   m_TagString: Untagged
@@ -38196,9 +38649,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0a218035ae8b1f4cb77ad8e71d2f238, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canMove: 0
   moveNow: 0
   stepToMove: 0
-  pathObjects: {fileID: 0}
+  pathsParent: {fileID: 0}
+--- !u!61 &2007018116
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2007018111}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 70, y: 70}
+  m_EdgeRadius: 0
 --- !u!114 &2009546650 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1206671168907694900, guid: 2ca66cc56c1e2a4438d3c20f7d5f2505, type: 3}
@@ -38655,6 +39135,7 @@ GameObject:
   - component: {fileID: 2048130605}
   - component: {fileID: 2048130604}
   - component: {fileID: 2048130606}
+  - component: {fileID: 2048130607}
   m_Layer: 0
   m_Name: player (1)
   m_TagString: Untagged
@@ -38731,9 +39212,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 811cf85ae2f917941b802dcfdefb688f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canMove: 0
   moveNow: 0
   stepToMove: 0
-  pathObjects: {fileID: 0}
+  pathsParent: {fileID: 0}
+--- !u!61 &2048130607
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2048130602}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 70, y: 70}
+  m_EdgeRadius: 0
 --- !u!1 &2049641394 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2767000081428111675, guid: 2ca66cc56c1e2a4438d3c20f7d5f2505, type: 3}
@@ -39105,6 +39613,7 @@ GameObject:
   - component: {fileID: 2072278256}
   - component: {fileID: 2072278255}
   - component: {fileID: 2072278257}
+  - component: {fileID: 2072278258}
   m_Layer: 0
   m_Name: player
   m_TagString: Untagged
@@ -39128,7 +39637,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -167, y: -250}
+  m_AnchoredPosition: {x: -54, y: -322}
   m_SizeDelta: {x: 54.2665, y: 70.5953}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2072278255
@@ -39181,10 +39690,66 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 424619fa7d03c8d48aab7e71574542f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canMove: 0
   moveNow: 0
   stepToMove: 0
-  pathObjects: {fileID: 0}
-  test: {fileID: 1460804272}
+  pathsParent: {fileID: 0}
+--- !u!114 &2072278258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2072278253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 0}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2072278257}
+        m_TargetAssemblyTypeName: GreenPlayer, Assembly-CSharp
+        m_MethodName: onClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2072889433
 GameObject:
   m_ObjectHideFlags: 0

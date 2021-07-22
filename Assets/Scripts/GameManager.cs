@@ -149,7 +149,7 @@ public class GameManager : MonoBehaviour
             //case 2:
         };
 
-        print(MenuManager.numberOfPlayers);
+        //print(MenuManager.numberOfPlayers);
        
     }
 

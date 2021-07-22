@@ -5,6 +5,14 @@ using UnityEngine;
 public class BluePlayer : Player
 {
     // Start is called before the first frame update
+
+
+    private void OnMouseDown()
+    {
+        print("Blue Player Clicked");
+    }
+
+
     void Start()
     {
         

@@ -4,14 +4,23 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-   public bool moveNow;
-   public int stepToMove;
+    public bool canMove;
+    public bool moveNow;
+    public int stepToMove;
 
-   public PathObjects pathObjects;
+    //public PathObjects pathObjects;
+    public PathObjectsParent pathsParent;
 
-   private void awake()
+    void Start()
+    {
+        //print("Player script Start methodstarted");
+        
+    }
+
+   void Awake()
    {
-       //print("Parent player awake method called");
-       pathObjects = FindObjectOfType<PathObjects>();
+        //print("Player script Awake methodstarted");
+        pathsParent = FindObjectOfType<PathObjectsParent>();
+    //    print(pathsParent);
    }
 }

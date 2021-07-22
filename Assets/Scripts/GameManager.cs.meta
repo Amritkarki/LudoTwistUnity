@@ -1,0 +1,80 @@
+fileFormatVersion: 2
+guid: cd777a8b5f7776647ba4757ab6f4845e
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - redFrame: {instanceID: 0}
+  - blueFrame: {instanceID: 0}
+  - greenFrame: {instanceID: 0}
+  - yellowFrame: {instanceID: 0}
+  - red1Border: {instanceID: 0}
+  - red2Border: {instanceID: 0}
+  - red3Border: {instanceID: 0}
+  - red4Border: {instanceID: 0}
+  - green1Border: {instanceID: 0}
+  - green2Border: {instanceID: 0}
+  - green3Border: {instanceID: 0}
+  - green4Border: {instanceID: 0}
+  - blue1Border: {instanceID: 0}
+  - blue2Border: {instanceID: 0}
+  - blue3Border: {instanceID: 0}
+  - blue4Border: {instanceID: 0}
+  - yellow1Border: {instanceID: 0}
+  - yellow2Border: {instanceID: 0}
+  - yellow3Border: {instanceID: 0}
+  - yellow4Border: {instanceID: 0}
+  - redPlayer1: {instanceID: 0}
+  - redPlayer2: {instanceID: 0}
+  - redPlayer3: {instanceID: 0}
+  - redPlayer4: {instanceID: 0}
+  - bluePlayer1: {instanceID: 0}
+  - bluePlayer2: {instanceID: 0}
+  - bluePlayer3: {instanceID: 0}
+  - bluePlayer4: {instanceID: 0}
+  - greenPlayer1: {instanceID: 0}
+  - greenPlayer2: {instanceID: 0}
+  - greenPlayer3: {instanceID: 0}
+  - greenPlayer4: {instanceID: 0}
+  - yellowPlayer1: {instanceID: 0}
+  - yellowPlayer2: {instanceID: 0}
+  - yellowPlayer3: {instanceID: 0}
+  - yellowPlayer4: {instanceID: 0}
+  - redPlayer1Button: {instanceID: 0}
+  - redPlayer2Button: {instanceID: 0}
+  - redPlayer3Button: {instanceID: 0}
+  - redPlayer4Button: {instanceID: 0}
+  - greenPlayer1Button: {instanceID: 0}
+  - greenPlayer2Button: {instanceID: 0}
+  - greenPlayer3Button: {instanceID: 0}
+  - greenPlayer4Button: {instanceID: 0}
+  - bluePlayer1Button: {instanceID: 0}
+  - bluePlayer2Button: {instanceID: 0}
+  - bluePlayer3Button: {instanceID: 0}
+  - bluePlayer4Button: {instanceID: 0}
+  - yellowPlayer1Button: {instanceID: 0}
+  - yellowPlayer2Button: {instanceID: 0}
+  - yellowPlayer3Button: {instanceID: 0}
+  - yellowPlayer4Button: {instanceID: 0}
+  - redWinningImage: {instanceID: 0}
+  - greenWinningImage: {instanceID: 0}
+  - blueWinningImage: {instanceID: 0}
+  - yellowWinningImage: {instanceID: 0}
+  - diceRoll: {instanceID: 0}
+  - reddiceRoll: {instanceID: 0}
+  - greendiceRoll: {instanceID: 0}
+  - bluediceRoll: {instanceID: 0}
+  - yellowdiceRoll: {instanceID: 0}
+  - dice1RollAnnimation: {instanceID: 0}
+  - dice2RollAnnimation: {instanceID: 0}
+  - dice3RollAnnimation: {instanceID: 0}
+  - dice4RollAnnimation: {instanceID: 0}
+  - dice5RollAnnimation: {instanceID: 0}
+  - dice6RollAnnimation: {instanceID: 0}
+  - confirmScreen: {instanceID: 0}
+  - gameCompletedScreen: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

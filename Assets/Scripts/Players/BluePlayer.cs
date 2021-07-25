@@ -4,23 +4,37 @@ using UnityEngine;
 
 public class BluePlayer : Player
 {
-    // Start is called before the first frame update
+    RollingDice blueRollingDice;
 
-
-    private void OnMouseDown()
+    private void Start()
     {
-        print("Blue Player Clicked");
+        blueRollingDice = GetComponentInParent<BlueHome>().rollingDice;
     }
-
-
-    void Start()
-    {
+    public void onClick(){
         
+        if(GameManager.gm.rolledDice !=null)
+        {
+            if(!isReadyToMove)
+            {
+                if(GameManager.gm.rolledDice == blueRollingDice && GameManager.gm.numberOfStepsToMove == 6)
+                {
+                    MakePlayerReadyToMove(pathsParent.bluePathPoint);
+                    GameManager.gm.numberOfStepsToMove = 0;
+
+                    //Here we will activate the dark transparent background active 
+
+                    return;
+                }
+
+            }
+
+            if(GameManager.gm.rolledDice == blueRollingDice && isReadyToMove)
+            {
+                canMove = true;
+            }
+        }
+        // UpdatecanMove = true;
+        moveSteps(pathsParent.bluePathPoint);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
